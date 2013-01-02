@@ -1,252 +1,268 @@
 <!-- Copyright (c) 2012 Mobile Developer Solutions -->
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
-    <title>Short Courses</title>
-	
-<!-- load css files -->
- 	<link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="js/jquery.mobile/writtle.css" /> 
-	
-<!-- load javascript framworks -->
-    <script src="js/jquery.mobile/jquery-1.7.2.min"></script>
-	<script src="js/jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script>
-<!-- load javascript for the page -->
-	<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
-  	<script type="text/javascript" charset="utf-8" src="js/test.js"></script>
-	<script type="text/javascript" charset="utf-8">
-	
-	document.addEventListener("deviceready", onDeviceReady, false);
+    
+    <head>
+        <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <title>Short Courses</title>
+        <!-- load css files -->
+        <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.1.0.min.css"
+        />
+        <link rel="stylesheet" href="js/jquery.mobile/writtle.css" />
+        <!-- load javascript framworks -->
+        <script src="js/jquery.mobile/jquery-1.7.2.min"></script>
+        <script src="js/jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script>
+        <!-- load javascript for the page -->
+        <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/test.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            document.addEventListener("deviceready", onDeviceReady, false);
 
-		
-    function onDeviceReady() {
-    	
-    	// Hide the splach Screen when the device is ready //
-    	    navigator.splashscreen.hide();
-		// Show Device info ////
-  
-        var element = document.getElementById('deviceProperties');
 
-        element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
-                            'Device Cordova: '  + device.cordova + '<br />' + 
-                            'Device Platform: ' + device.platform + '<br />' + 
-                            'Device UUID: '     + device.uuid     + '<br />' + 
-                            'Device Version: '  + device.version  + '<br />';
-    }
-    
-    
-    
- 
-    
+            function onDeviceReady() {
 
-	
-	</script>
-	<style type="text/css">
-		
-			
-		
-	</style>
-	
-	</head>
-  
-  <body>
-  
-	<div data-role="page" id="home" class="type-interior"  data-theme="b">
-	<!-- index page header -->
-	<div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
-		<h1>Writtle College Short Courses </h1>
-		<!-- Phone Buttom -->
-		<ul>
-			<li>
-				<a class="phone" id="phone" target="_self" href="tel:01245424200" >
+                // Hide the splach Screen when the device is ready //
+                navigator.splashscreen.hide();
+                // Show Device info ////
+
+                var element = document.getElementById('deviceProperties');
+
+                element.innerHTML = 'Device Name: ' + device.name + '<br />' +
+                    'Device Cordova: ' + device.cordova + '<br />' +
+                    'Device Platform: ' + device.platform + '<br />' +
+                    'Device UUID: ' + device.uuid + '<br />' +
+                    'Device Version: ' + device.version + '<br />';
+            }
+        </script>
+        <style type="text/css">
+</style>
+    </head>
+    
+    <body>
+        <div data-role="page" id="home" class="type-interior" data-theme="b">
+            <!-- index page header -->
+            <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
+                	<h1>Writtle College Short Courses </h1>
+
+                <!-- Phone Buttom -->
+                <ul>
+                    <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
 				<img src="images/phone.png" height="35" width="50"  alt="Call">
 				</a>
-			</li>
-		</ul>
-		
-		<div id="logo_button" class="ui-left">
-			<ul>
-			<li><a href="#home"><img src="images/logo.png" height="35px" /></a></li>
-			</ul>
-		</div>	
-			
-	</div> <!-- Header -->
-		<!-- Main Image tags -->
-	 <div id="content">
-		<img src="images/902.jpg" />
-	 </div>
-	 
-		<div data-role="content">
-			<div id="main-content">
-				<h1>Short Courses and Workshops </h1>
-				<p>Writtle College continues to offer a variety of short courses, ideal for learning specialist crafts as a hobby or to gain accreditation for technical skills.
-					To view all related short courses simply click on the buttons.</p>
-			</div>
-			
-			<ul data-role="listview"  data-corners="false" data-theme="w" data-inset="true">
-				<li><a href="#news">News</a></li>
-				<li><a href="#second">Courses</a></li>
-				<li><a href="#contact">Contact Us</a></li>
-				
-				
-			</ul>
-			
-		
-	
-		
-		
-		
-		
-	
-	</div>	<!-- Content-->		
-	
-	<div data-role="footer"  data-theme="a" class="footer-docs">
-		<p style="text-align:center;">&copy; 2012 Writtle College</p>
-		<a href="#info" data-icon="info" data-role="button" data-iconpos="notext" id="intro" class="ui-btn-right"data-rel="dialog" data-transition="pop">info</a>
-	</div>	<!--footer-->
-	
-</div> <!--  Home Page -->	
-	
-	
-	 
-<!-- Start of second page -->
-<div data-role="page" id="news">
- 
-   <!-- index page header -->
-	<div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
-		<h1>Short Courses </h1>
-		<!-- Phone Buttom -->
-		<ul>
-			<li>
-				<a class="phone" id="phone" target="_self" href="tel:01245424200" >
-				<img src="images/phone.png" height="35" width="50"  alt="Call">
-				</a>
-			</li>
-		</ul>
-		
-		<div id="logo_button" class="ui-left">
-			<ul>
-			<li><a href="#home"><img src="images/logo.png" height="35px" /></a></li>
-			</ul>
-		</div>	
-			
-	</div> <!-- Header -->
- 
-    <div data-role="content">    
-        <p>I'm the second content</p>        
-        <p><a href="#home">Home</a></p>    
-    </div><!-- /content -->
- 
-    <div data-role="footer" data-position="fixed">
-        
-        <div data-role="navbar" data-theme="a" data-iconpos="top">
-		<ul>
-			<li><a href="a.html" data-icon="home">Home</a></li>
-			<li><a href="b.html"data-icon="delete">Albums</a></li>
-			<li><a href="c.html"data-icon="delete">Emails</a></li>
-			<li><a href="d.html"data-role="button" data-icon="delete">Info</a></li>
-		</ul>
-	</div><!-- /navbar -->
-        
-        
-        
-    </div><!-- /footer -->
-</div><!-- /page -->
-	
-	
-	
 
-	
-	
-	
-	
-	
-	
-	
-	<!-- Start of contact page -->
-	<div data-role="page" id="contact" class="type-interior"  data-theme="b">
-	
-	<!-- index page header -->
-	<div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
-		<h1>Writtle College Short Courses </h1>
-		<!-- Phone Buttom -->
-		<ul>
-			<li>
-				<a class="phone" id="phone" target="_self" href="tel:01245424200" >
+                    </li>
+                </ul>
+                <div id="logo_button" class="ui-left">
+                    <ul>
+                        <li><a href="#home"><img src="images/logo.png" height="35px" /></a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header -->
+            <!-- Main Image tags -->
+            <div id="content">
+                <img src="images/902.jpg" />
+            </div>
+            <div data-role="content">
+                <div id="main-content">
+                    	<h1>Short Courses and Workshops </h1>
+
+                    <p>Writtle College continues to offer a variety of short courses, ideal for
+                        learning specialist crafts as a hobby or to gain accreditation for technical
+                        skills. To view all related short courses simply click on the buttons.</p>
+                </div>
+                <ul data-role="listview" data-corners="false" data-theme="w" data-inset="true">
+                    <li><a href="#news">News</a>
+
+                    </li>
+                    <li><a href="#second">Courses</a>
+
+                    </li>
+                    <li><a href="#contact">Contact Us</a>
+
+                    </li>
+                </ul>
+            </div>
+            <!-- Content-->
+            <div data-role="footer" data-theme="a" class="footer-docs">
+                <p style="text-align:center;">&copy; 2012 Writtle College</p>	<a href="#info" data-icon="info" data-role="button"
+                data-iconpos="notext" id="intro" class="ui-btn-right" data-rel="dialog"
+                data-transition="pop">info</a>
+
+            </div>
+            <!--footer-->
+        </div>
+        <!-- Home Page -->
+        <!-- Start of second page -->
+        <div data-role="page" id="news">
+            <!-- index page header -->
+            <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
+                	<h1>Short Courses </h1>
+
+                <!-- Phone Buttom -->
+                <ul>
+                    <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
 				<img src="images/phone.png" height="35" width="50"  alt="Call">
 				</a>
-			</li>
-		</ul>
-		 
-		<div id="logo_button" class="ui-left">
-			<ul>
-			<li><a href="#home"><img src="images/logo.png" height="35px" /></a></li>
-			</ul>
-		</div>	
-			
-	</div> <!-- Header -->
-		<!-- Main Image tags -->
-	 <div id="content">
-		<img src="images/90.jpg" />
-	 </div>
-	 
-		<div data-role="content">
-			<div id="main-content">
-				<h1>Contact Us ... </h1>
-				<p>Writtle College continues to offer a variety of short courses, ideal for learning specialist crafts as a hobby or to gain accreditation for technical skills.
-					To view all related short courses simply click on the buttons.</p>
-			</div>
-			
-			
-	
-	</div>	<!-- Content-->		
-	
-	<div data-role="footer"  data-theme="a" class="footer-docs">
-		<p style="text-align:center;">&copy; 2012 Writtle College</p>
-		<a href="#info" data-icon="info" data-role="button" data-iconpos="notext" id="intro" class="ui-btn-right"data-rel="dialog" data-transition="pop">info</a>
-	</div>	<!--footer-->
-	
-</div> <!--  Home Page -->	
-	
-	</div> <!-- Page -->	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!-- Pop Up Pages  -->
-<!-- Info Page -->	
-<div data-role="page" id="info">
-    <div data-role="header" data-theme="a">
-        <h1>Info About App</h1>
-	</div>
-	<div data-role="content">
-		<p>Version <b>0.1 Dev</b></p>
-		<p id="deviceProperties">Loading device properties...</p>
-	</div>
-</div><!-- info page -->	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
-	<!-- load phone API 
-	
-	<script type="text/javascript" charset="utf-8" src="apis/accelerometer.js"></script>
+
+                    </li>
+                </ul>
+                <div id="logo_button" class="ui-left">
+                    <ul>
+                        <li><a href="#home"><img src="images/logo.png" height="35px" /></a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header -->
+            <div data-role="content">
+                <p>I'm the second content</p>
+                <p><a href="#home">Home</a>
+
+                </p>
+            </div>
+            <!-- /content -->
+            <div data-role="footer" data-position="fixed" data-theme="d" class="nav-glyphish-example">
+                <div data-role="navbar" data-theme="a" data-iconpos="top" class="ui-body-d nav-glyphish-example">
+                    
+                
+                   
+                    <ul>
+                        <li><a href="b.html" id="back" data-icon="custom">Back</a>
+
+                        </li>
+                        <li><a href="b.html" id="news-icon" data-icon="custom">News</a>
+
+                        </li>
+                        <li><a href="b.html" id="courses-icon" data-icon="custom">Courses</a>
+
+                        </li>
+                        <li><a href="#contact" id="contact-us-icon" data-icon="custom">Contact Us</a>
+
+                        </li>
+                    </ul>
+                       
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page -->
+        <!-- Start of contact page -->
+        <div data-role="page" id="contact" class="type-interior" data-theme="b">
+            <!-- index page header -->
+            <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
+                	<h1>Writtle College Short Courses </h1>
+
+                <!-- Phone Buttom -->
+                <ul>
+                    <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
+				<img src="images/phone.png" height="35" width="50"  alt="Call">
+				</a>
+
+                    </li>
+                </ul>
+                <div id="logo_button" class="ui-left">
+                    <ul>
+                        <li><a href="#home"><img src="images/logo.png" height="35px" /></a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header -->
+            <!-- Main Image tags -->
+            <div id="content">
+                <img src="images/90.jpg" />
+            </div>
+            <div data-role="content">
+                <div id="main-content">
+                    	<h1>Contact Us ... </h1>
+
+                    <p>Writtle College continues to offer a variety of short courses, ideal for
+                        learning specialist crafts as a hobby or to gain accreditation for technical
+                        skills. To view all related short courses simply click on the buttons.</p>
+                </div>
+                <div data-role="collapsible-set" data-theme="a">
+                    <div data-role="collapsible" data-collapsed="true">
+                        	<h3>Address</h3>
+
+                        <p>Writtle College</p>
+                        <p>Chelmsford</p>
+                        <p>Essex</p>
+                        <p>CM1 3RR</p>
+                    </div>
+                    <div data-role="collapsible">
+                        	<h3>Directions</h3>
+
+                        <div data-role="collapsible">
+                            	<h4>By Rail</h4> 
+                            <p>The train journey from London, Liverpool Street station to Chelmsford
+                                takes about 40 minutes, with 3-4 trains running per hour. You can then
+                                get a taxi or catch a bus: First , number 45 - to Writtle Village Green
+                                which is approximately 10 minutes' walk from the main campus</p>
+                        </div>
+                        <!-- End collapsible by rail -->
+                        <div data-role="collapsible">
+                            	<h4>By Car</h4> 
+                            <p>We are 15 minutes drive from the M25 with ample parking on site for students
+                                and visitors. Download the most appropriate version of detailed route map:
+                                <!--
+                                <img src="images/Writtle_College_Map.gif" />--></p>
+                        </div>
+                        <!-- End collapsible by Car -->
+                        <div data-role="collapsible" >
+                            	<h4>By Air</h4> 
+                            <p>London Stansted, London's third airport, is only a 35 minute drive from
+                                Writtle with cheap flights to many EU destinations. Heathrow and Gatwick
+                                are also easily accessible via the M25 (90 minute drive).</p>
+                        </div>
+                        <!-- End collapsible by Car -->
+                        <div data-role="collapsible">
+                            	<h4>By Coach</h4> 
+                            <p>A regular coach service is available to Chelmsford bus station from London
+                                and all three major London airports (Stansted, Heathrow & Gatwick).</p>
+                        </div>
+                        <!-- End collapsible by Car -->
+                    </div>
+                    <!-- END data-role="collapsible Directions -->
+                </div>
+            </div>
+        </div>
+        <!-- Content-->
+        <div data-role="footer" data-theme="a" class="footer-docs">
+            <p style="text-align:center;">&copy; 2012 Writtle College</p>	<a href="#info" data-icon="info" data-role="button"
+            data-iconpos="notext" id="intro" class="ui-btn-right" data-rel="dialog"
+            data-transition="pop">info</a>
+
+        </div>
+        <!--footer-->
+        </div>
+        <!-- Home Page -->
+        </div>
+        <!-- Page -->
+        <!-- Pop Up Pages -->
+        <!-- Info Page -->
+        <div data-role="page" id="info">
+            <div data-role="header" data-theme="a">
+                 <h1>Info About App</h1>
+
+            </div>
+            <div data-role="content">
+                <p>Version <b>0.1 Dev</b>
+
+                </p>
+                <p id="deviceProperties">Loading device properties...</p>
+            </div>
+        </div>
+        <!-- info page -->
+        <script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
+        <!-- load phone API <script type="text/javascript" charset="utf-8"
+        src="apis/accelerometer.js"></script>
 	<script type="text/javascript" charset="utf-8" src="apis/camera.js"></script>
 	<script type="text/javascript" charset="utf-8" src="apis/capture.js"></script>
 	<script type="text/javascript" charset="utf-8" src="apis/compass.js"></script>
@@ -260,5 +276,6 @@
 	<script type="text/javascript" charset="utf-8" src="apis/notification.js"></script>
 	<script type="text/javascript" charset="utf-8" src="apis/storage.js"></script> 			
   	-->
-  </body>
+    </body>
+
 </html>
