@@ -1214,12 +1214,14 @@ margin-top:1px;
 
 /* Nav Green nav bar */
 .ui-body-d {
+	background: #5F938C;
+
 	background: -webkit-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: -moz-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: -o-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: -ms-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
-	border: 1px solid #578680;
+	border: 0px solid #578680;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-shadow: 0 1px 1px #444444;
@@ -1227,6 +1229,7 @@ margin-top:1px;
 
 
 .ui-btn-up-d {
+    background: #5F938C;
 	background: -webkit-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: -moz-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: -o-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
@@ -1239,50 +1242,83 @@ margin-top:1px;
 }
 
 
-.ui-btn-down-d {
-	border: 1px solid #FFFFFF /*{a-bdown-border}*/;
-	background: #FFFFFF /*{a-bdown-background-color}*/;
+.ui-bar-d {
+	background: -webkit-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
+	background: -moz-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
+	background: -o-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
+	background: -ms-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
+	background: linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
+	border: 0px solid #578680;
+	color: #FFFFFF;
 	font-weight: bold;
-	color: #000000 /*{a-bdown-color}*/;
-	text-shadow: 0 /*{a-bdown-shadow-x}*/ 1px /*{a-bdown-shadow-y}*/ 0 /*{a-bdown-shadow-radius}*/ #eeeeee /*{a-bdown-shadow-color}*/;
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #e5e5e5 /*{a-bdown-background-start}*/), to( #FFFFFF /*{a-bdown-background-end}*/)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient( #000 /*{a-bdown-background-start}*/, #FFFFFF /*{a-bdown-background-end}*/); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #000/*{a-bdown-background-start}*/, #FFFFFF /*{a-bdown-background-end}*/); /* FF3.6 */
-	background-image:     -ms-linear-gradient( #000 /*{a-bdown-background-start}*/, #FFFFFF /*{a-bdown-background-end}*/); /* IE10 */
-	background-image:      -o-linear-gradient( #000 /*{a-bdown-background-start}*/, #FFFFFF /*{a-bdown-background-end}*/); /* Opera 11.10+ */
-	background-image:         linear-gradient( #000/*{a-bdown-background-start}*/, #FFFFFF /*{a-bdown-background-end}*/);
+	text-shadow: 0 1px 1px #444444;
 }
-
-
 
 .ui-btn-hover-d {
-    background: #35655f;
-    border: 1px solid #35655f;
-    color: #FFFFFF;
-    font-weight: bold;
-    text-shadow: 0 1px 1px #111111;
+	background: #35655f;
+	border: 1px solid #35655f;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #111111;
 }
+
+
 .ui-btn-hover-d a.ui-link-inherit {
-    color: #FFFFFF;
+	color: #FFFFFF;
 }
+
 .ui-btn-down-d {
-    background:#35655f;
-    border: 1px solid #35655f;
-    color: #FFFFFF;
-    font-weight: bold;
-    text-shadow: 0 1px 1px #111111;
+	background: #35655f;
+	border: 1px solid #35655f;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #111111;
 }
-
-
-
 
 /* icons for the nav bar */
+.nav-glyphish-example .ui-btn .ui-btn-inner {
+	padding-top: 40px !important;
 
-	.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
-.nav-glyphish-example .ui-btn .ui-icon { width: 35px!important; height: 35px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }
-#contact-us-icon .ui-icon { background: url(images/icons/home_btn.png) 50% 50% no-repeat; background-size: 32px 32px; }
-#news-icon .ui-icon { background: url(images/icons/news-btn.png) 50% 50% no-repeat; background-size: 32px 30px; }
-#back .ui-icon { background: url(images/icons/back.png) 50% 50% no-repeat; background-size: 32px 32px; }
-#courses-icon .ui-icon { background: url(images/icons/courses-icon.png) 50% 50% no-repeat; background-size: 32px 32px; }
-#coffee .ui-icon { background: url(glyphish-icons/100-coffee.png) 50% 50% no-repeat; background-size: 20px 24px; }
-#skull .ui-icon { background: url(glyphish-icons/21-skull.png) 50% 50% no-repeat; background-size: 22px 24px; }
+}
+
+.nav-glyphish-example .ui-btn .ui-icon {
+	width: 35px !important;
+	height: 35px !important;
+	margin-left: -15px !important;
+
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border-radius: none !important;
+}
+
+#contact-us-icon .ui-icon {
+	background: url(images/icons/home_btn.png) 50% 50% no-repeat;
+
+	-webkit-background-size: 32px 32px;
+	-moz-background-size: 32px 32px;
+	background-size: 32px 32px;
+}
+
+#news-icon .ui-icon {
+	background: url(images/icons/news-btn.png) 50% 50% no-repeat;
+
+	-webkit-background-size: 32px 30px;
+	-moz-background-size: 32px 30px;
+	background-size: 32px 30px;
+}
+
+#back .ui-icon {
+	background: url(images/icons/back.png) 50% 50% no-repeat;
+
+	-webkit-background-size: 32px 32px;
+	-moz-background-size: 32px 32px;
+	background-size: 32px 32px;
+}
+
+#courses-icon .ui-icon {
+	background: url(images/icons/courses-icon.png) 50% 50% no-repeat;
+
+	-webkit-background-size: 32px 32px;
+	-moz-background-size: 32px 32px;
+	background-size: 32px 32px;
+}
