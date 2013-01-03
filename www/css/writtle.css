@@ -932,7 +932,7 @@ a.ui-link-inherit {
 
 .ui-page { background:#fff; /* Change background color of body */
 	-webkit-backface-visibility: hidden; /* Romove the flicker when page load on  Android */
-	 height: 100% !important; 
+	
 
 } 
 .ui-corner-all {
