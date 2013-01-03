@@ -6,9 +6,9 @@
         <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
         <title>Short Courses</title>
         <!-- load css files -->
-        <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.1.0.min.css"
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css"
         />
-        <link rel="stylesheet" href="js/jquery.mobile/writtle.css" />
+        <link rel="stylesheet" href="css/writtle.css" />
         <!-- load javascript framworks -->
         <script src="js/jquery.mobile/jquery-1.7.2.min"></script>
         <script src="js/jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
@@ -25,7 +25,7 @@
                 // Hide the splach Screen when the device is ready //
                 navigator.splashscreen.hide();
                 // Show Device info ////
-
+                // Get the Device Properties when phone is ready //
                 var element = document.getElementById('deviceProperties');
 
                 element.innerHTML = 'Device Name: ' + device.name + '<br />' +
@@ -36,11 +36,13 @@
             }
         </script>
         <style type="text/css">
-</style>
+        </style>
     </head>
     
     <body>
-	 <!-- Home Page -->
+
+        
+<!-- Home Page -->
         <div data-role="page" id="home" class="type-interior" data-theme="b">
             <!-- index page header -->
             <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
@@ -49,14 +51,14 @@
                 <!-- Phone Buttom -->
                 <ul>
                     <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
-				<img src="images/phone.png" height="35" width="50"  alt="Call">
+				<img src="images/icons/phone.png" height="35" width="50"  alt="Call">
 				</a>
 
                     </li>
                 </ul>
                 <div id="logo_button" class="ui-left">
                     <ul>
-                        <li><a href="#home"><img src="images/logo.png" height="35px" /></a>
+                        <li><a href="#home"><img src="images/icons/logo.png" height="35px" /></a>
 
                         </li>
                     </ul>
@@ -79,7 +81,7 @@
                     <li><a href="#news">News</a>
 
                     </li>
-                    <li><a href="#second">Courses</a>
+                    <li><a href="#courses">Courses</a>
 
                     </li>
                     <li><a href="#contact">Contact Us</a>
@@ -98,49 +100,70 @@
         </div>
        
 	   
-	   <!-- Second Page -->
+        
+        
+<!-- Second Page -->
 	   
 	   
         <!-- Start of second page -->
         <div data-role="page" id="news">
             <!-- index page header -->
             <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
-                	<h1>Short Courses </h1>
+                	<h1>News </h1>
 
                 <!-- Phone Buttom -->
                 <ul>
                     <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
-				<img src="images/phone.png" height="35" width="50"  alt="Call">
+				<img src="images/icons/phone.png" height="35" width="50"  alt="Call">
 				</a>
 
                     </li>
                 </ul>
                 <div id="logo_button" class="ui-left">
                     <ul>
-                        <li><a href="#home"><img src="images/logo.png" height="35px" /></a>
+                        <li><a href="#home"><img src="images/icons/logo.png" height="35px" /></a>
 
                         </li>
                     </ul>
                 </div>
             </div>
             <!-- Header -->
-            <div data-role="content">
-                <p>I'm the second content</p>
-                <p><a href="#home">Home</a>
-
-                </p>
+            <div data-role="content" class="content-page">
+               
+                    
+                        
+                
+              
+              
+                
+                <ul data-role="listview" data-inset="true" data-theme="w" class="content-page"  >
+                    <li><a href="#"> news 1</a></li>
+                    <li><a href="#">Animal Care & Equine</a></li>
+                    <li><a href="#">Arboriculture</a></li>
+                    <li><a href="#">Art & Craft, Floristry and Photography</a></li>
+                    <li><a href="#"> First Aid and Health & Safety</a></li>
+                     <li><a href="#">Horticulture & Landscaping</a></li>
+                    <li><a href="#">Machinery Use and Maintenance</a></li>
+                    <li><a href="#">New Courses</a></li>
+                    <li><a href="#">Other Short Courses</a></li>
+                   
+                </ul>
+                   
+                
+                  
             </div>
             <!-- /content -->
+            
             <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
-                <div data-role="navbar" data-iconpos="top" class="ui-body-d nav-glyphish-example">
+                <div data-role="navbar" data-iconpos="top" class="ui-body-d">
                     <ul>
                         <li><a href="#" data-rel="back" id="back" data-icon="custom">Back</a>
 
                         </li>
-                        <li><a href="b.html" id="news-icon" data-icon="custom">News</a>
+                        <li><a href="#news" id="news-icon" data-icon="custom" class="ui-btn-active-d ui-state-persist">News</a>
 
                         </li>
-                        <li><a href="b.html" id="courses-icon" data-icon="custom">Courses</a>
+                        <li><a href="#courses" id="courses-icon" data-icon="custom">Courses</a>
 
                         </li>
                         <li><a href="#contact" id="contact-us-icon" data-icon="custom">Contact Us</a>
@@ -156,6 +179,99 @@
 		
 		
 		
+        
+        
+        
+          
+        <!-- Start of second page -->
+        <div data-role="page" id="courses">
+            <!-- index page header -->
+            <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
+                	<h1>Short Courses </h1>
+
+                <!-- Phone Buttom -->
+                <ul>
+                    <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
+				<img src="images/icons/phone.png" height="35" width="50"  alt="Call">
+				</a>
+
+                    </li>
+                </ul>
+                <div id="logo_button" class="ui-left">
+                    <ul>
+                        <li><a href="#home"><img src="images/icons/logo.png" height="35px" /></a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header -->
+            <div data-role="content" class="content-page">
+               
+                    <div id="search-box">
+                        
+                
+              
+              
+                
+                <ul data-role="listview" data-inset="true" data-filter="true"  data-theme="w" class="content-page"  data-icon="arrow-r" >
+                    <li><a href="#"> AMTRA (Animal Medicines Training & Regulatory Authority)</a></li>
+                    <li><a href="#">Animal Care & Equine</a></li>
+                    <li><a href="#">Arboriculture</a></li>
+                    <li><a href="#">Art & Craft, Floristry and Photography</a></li>
+                    <li><a href="#"> First Aid and Health & Safety</a></li>
+                     <li><a href="#">Horticulture & Landscaping</a></li>
+                    <li><a href="#">Machinery Use and Maintenance</a></li>
+                    <li><a href="#">New Courses</a></li>
+                    <li><a href="#">Other Short Courses</a></li>
+                   
+                </ul>
+                    </div>
+                
+                  
+            </div>
+            <!-- /content -->
+            
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                <div data-role="navbar" data-iconpos="top" class="ui-body-d">
+                    <ul>
+                        <li><a href="#" data-rel="back" id="back" data-icon="custom">Back</a>
+
+                        </li>
+                        <li><a href="#news" id="news-icon" data-icon="custom" class="ui-btn-active-d ui-state-persist">News</a>
+
+                        </li>
+                        <li><a href="#courses" id="courses-icon" data-icon="custom">Courses</a>
+
+                        </li>
+                        <li><a href="#contact" id="contact-us-icon" data-icon="custom">Contact Us</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page -->
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 		
         <!-- Start of contact page -->
         <div data-role="page" id="contact" class="type-interior" data-theme="b">
@@ -166,14 +282,14 @@
                 <!-- Phone Buttom -->
                 <ul>
                     <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
-				<img src="images/phone.png" height="35" width="50"  alt="Call">
+				<img src="images/icons/phone.png" height="35" width="50"  alt="Call">
 				</a>
 
                     </li>
                 </ul>
                 <div id="logo_button" class="ui-left">
                     <ul>
-                        <li><a href="#home"><img src="images/logo.png" height="35px" /></a>
+                        <li><a href="#home"><img src="images/icons/logo.png" height="35px" /></a>
 
                         </li>
                     </ul>
@@ -258,7 +374,15 @@
 
             </div>
             <div data-role="content">
-                <p>Version <b>0.1 Dev</b>
+                <p>Version <b>0.0.1 Dev</b>
+                <p>Bug List</p>
+                <p><ul>
+                    <li> Navbar bug in the active style.</li>
+                    <li>App File to big in size no more the 3mb</li>
+                </ul>
+                    
+                    
+                </p>
 
                 </p>
                 <p id="deviceProperties">Loading device properties...</p>

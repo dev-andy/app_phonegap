@@ -113,6 +113,27 @@
 	background-image:      -o-linear-gradient( #fefefe /*{a-bup-background-start}*/, #dddddd /*{a-bup-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #fefefe /*{a-bup-background-start}*/, #dddddd /*{a-bup-background-end}*/);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .ui-btn-up-a:visited,
 .ui-btn-up-a a.ui-link-inherit {
 	color: #2f3e46 /*{a-bup-color}*/;
@@ -479,16 +500,16 @@ a.ui-link-inherit {
 -----------------------------------------------------------------------------------------------------------*/
 .ui-btn-active {
 	border: 1px solid #578680 /*{global-active-border}*/;
-	background: #578680 /*{global-active-background-color}*/;
+	background: #000 /*{global-active-background-color}*/;
 	font-weight: bold;
 	color: #ffffff /*{global-active-color}*/;
 	cursor: pointer;
 	text-shadow: 0 /*{global-active-shadow-x}*/ 1px /*{global-active-shadow-y}*/ 1px /*{global-active-shadow-radius}*/ #444444 /*{global-active-shadow-color}*/;
 	text-decoration: none;
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #5f938c /*{global-active-background-start}*/), to( #4e7873 /*{global-active-background-end}*/)); /* Saf4+, Chrome */
-	background-image: -webkit-linear-gradient( #5f938c /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #5f938c /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* FF3.6 */
-	background-image:     -ms-linear-gradient( #5f938c /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* IE10 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #000 /*{global-active-background-start}*/), to( #4e7873 /*{global-active-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #000 /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #000 /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #000 /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* IE10 */
 	background-image:      -o-linear-gradient( #5f938c /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #5f938c /*{global-active-background-start}*/, #4e7873 /*{global-active-background-end}*/);
 	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
@@ -1072,8 +1093,10 @@ border-top-left-radius: 0;
 .ui-btn-up-w,
 .ui-btn-hover-w,
 .ui-btn-down-w {
-	 font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
-	text-decoration: none;
+	/* font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+        font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;
+        font-weight:normal;
+        text-decoration: none;
 }
 
 .ui-shadow {
@@ -1268,6 +1291,7 @@ margin-top:1px;
 }
 
 
+
 .ui-btn-hover-d a.ui-link-inherit {
 	color: #FFFFFF;
 }
@@ -1297,7 +1321,7 @@ margin-top:1px;
 }
 
 #contact-us-icon .ui-icon {
-	background: url(images/icons/home_btn.png) 50% 50% no-repeat;
+	background: url(../images/icons/home_btn.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 32px;
 	-moz-background-size: 32px 32px;
@@ -1305,7 +1329,7 @@ margin-top:1px;
 }
 
 #news-icon .ui-icon {
-	background: url(images/icons/news-btn.png) 50% 50% no-repeat;
+	background: url(../images/icons/news-btn.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 30px;
 	-moz-background-size: 32px 30px;
@@ -1313,7 +1337,7 @@ margin-top:1px;
 }
 
 #back .ui-icon {
-	background: url(images/icons/back.png) 50% 50% no-repeat;
+	background: url(../images/icons/back.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 32px;
 	-moz-background-size: 32px 32px;
@@ -1321,9 +1345,29 @@ margin-top:1px;
 }
 
 #courses-icon .ui-icon {
-	background: url(images/icons/courses-icon.png) 50% 50% no-repeat;
+	background: url(../images/icons/courses-icon.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 32px;
 	-moz-background-size: 32px 32px;
 	background-size: 32px 32px;
+}
+
+
+.ui-content  {
+    margin: 0;
+    padding: 0;
+}
+   
+
+.ui-content .ui-listview-inset {
+    margin: 15px 0px;
+}
+  
+    
+
+
+#search-box .ui-listview-filter {
+ padding: 15px 0 0 0;
+        
+    
 }
