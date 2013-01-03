@@ -1321,7 +1321,7 @@ margin-top:1px;
 }
 
 #contact-us-icon .ui-icon {
-	background: url(../images/icons/home_btn.png) 50% 50% no-repeat;
+	background: url(../images/icons/homeBtn.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 32px;
 	-moz-background-size: 32px 32px;
@@ -1329,7 +1329,7 @@ margin-top:1px;
 }
 
 #news-icon .ui-icon {
-	background: url(../images/icons/news-btn.png) 50% 50% no-repeat;
+	background: url(../images/icons/newsBtn.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 30px;
 	-moz-background-size: 32px 30px;
@@ -1345,7 +1345,7 @@ margin-top:1px;
 }
 
 #courses-icon .ui-icon {
-	background: url(../images/icons/courses-icon.png) 50% 50% no-repeat;
+	background: url(../images/icons/coursesIcon.png) 50% 50% no-repeat;
 
 	-webkit-background-size: 32px 32px;
 	-moz-background-size: 32px 32px;
