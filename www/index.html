@@ -6,12 +6,12 @@
         <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
         <title>Short Courses</title>
         <!-- load css files -->
-        <link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css"
+        <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"
         />
         <link rel="stylesheet" href="css/writtle.css" />
         <!-- load javascript framworks -->
-        <script src="js/jquery.mobile/jquery-1.7.2.min"></script>
-        <script src="js/jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+        <script src="js/jquery.mobile/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script>
         <!-- load javascript for the page -->
         <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
@@ -85,6 +85,10 @@
 
                     </li>
                     <li><a href="#contact">Contact Us</a>
+
+                    </li>
+                      <li>
+                    <a class="show-page-loading-msg" href="#testpage" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading now .." data-icon="arrow-r" data-iconpos="right">Test page</a>
 
                     </li>
                 </ul>
@@ -228,17 +232,7 @@
                 </ul>
                     </div>
                     
-                 <div data-role="controlgroup">
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="false" data-msgtext="" data-icon="arrow-r" data-iconpos="right">Default loader</button>
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-icon="arrow-r" data-iconpos="right">Text only</button>
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-icon="arrow-r" data-iconpos="right">Theme a</button>
-                    <button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme b" data-icon="arrow-r" data-iconpos="right">Theme b</button>
-                    <button class="show-page-loading-msg" data-theme="c" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme c" data-icon="arrow-r" data-iconpos="right">Theme c</button>
-                    <button class="show-page-loading-msg" data-theme="d" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme d" data-icon="arrow-r" data-iconpos="right">Theme d</button>
-                    <button class="show-page-loading-msg" data-theme="e" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme e" data-icon="arrow-r" data-iconpos="right">Theme e</button>
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-icon="arrow-r" data-html="<span class='ui-bar ui-overlay-c ui-corner-all'><img src='../_assets/images/jquery-logo.png' /><h2>is loading for you ...</h2></span>" data-iconpos="right">Custom HTML</button>
-                    <button class="hide-page-loading-msg" data-icon="delete" data-iconpos="right">Hide</button>
-                </div> 
+                 
                   
             </div>
             <!-- /content -->
@@ -387,22 +381,44 @@
             <div data-role="content">
                 <p>Version <b>0.0.1 Dev</b>
                 <p>Bug List</p>
-                <p><ul>
+                <ul>
                     <li> Navbar bug in the active style.</li>
                     <li>App File to big in size no more the 3mb</li>
-                </ul>
+                    </ul>
                     
                     
-                </p>
+                
 
-                </p>
+                
                 <p id="deviceProperties">Loading device properties...</p>
             </div>
-        </div>
+            </div>
+        
         <!-- info page -->
         
-        <script>
-        $(document).on("click", ".show-page-loading-msg", function() {
+            
+            
+            
+            <div data-role="page" id="testpage">
+     
+            <div data-role="controlgroup">
+                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="false" data-msgtext="" data-icon="arrow-r" data-iconpos="right">Default loader</button>
+                    <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-icon="arrow-r" data-iconpos="right">Text only</button>
+                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-icon="arrow-r" data-iconpos="right">Theme a</button>
+                    <button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme b" data-icon="arrow-r" data-iconpos="right">Theme b</button>
+                    <button class="show-page-loading-msg" data-theme="c" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme c" data-icon="arrow-r" data-iconpos="right">Theme c</button>
+                    <button class="show-page-loading-msg" data-theme="d" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme d" data-icon="arrow-r" data-iconpos="right">Theme d</button>
+                    <button class="show-page-loading-msg" data-theme="e" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme e" data-icon="arrow-r" data-iconpos="right">Theme e</button>
+                    <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-icon="arrow-r" data-html="<span class='ui-bar ui-overlay-c ui-corner-all'><img src='../_assets/images/jquery-logo.png' /><h2>is loading for you ...</h2></span>" data-iconpos="right">Custom HTML</button>
+                    <button class="hide-page-loading-msg" data-icon="delete" data-iconpos="right">Hide</button>
+                </div> 
+            </div>
+            
+            
+            
+            <script type="text/javascript">
+        
+          $(document).on("click", ".show-page-loading-msg", function() {
             var $this = $( this ),
                 theme = $this.jqmData("theme") || $.mobile.loader.prototype.options.theme,
                 msgText = $this.jqmData("msgtext") || $.mobile.loader.prototype.options.text,
@@ -420,7 +436,15 @@
         .on("click", ".hide-page-loading-msg", function() {
             $.mobile.loading( 'hide' );
         });
-    </script>
+        
+        
+            
+        
+        
+        
+            </script>
+            
+    
         <script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
         <!-- load phone API <script type="text/javascript" charset="utf-8"
         src="apis/accelerometer.js"></script>
