@@ -931,8 +931,10 @@ a.ui-link-inherit {
 /* Writtle style */
 
 .ui-page { background:#fff; /* Change background color of body */
-	-webkit-backface-visibility: hidden; /* Romove the flicker when page load on  Android */
 	
+	backface-visibility:hidden;
+-webkit-backface-visibility:hidden; /* Chrome and Safari */
+-moz-backface-visibility:hidden; /* Firefox */
 
 } 
 .ui-corner-all {
