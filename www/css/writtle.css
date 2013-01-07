@@ -188,7 +188,7 @@
 .ui-bar-b {
 	border: 1px solid #b3b3b3 /*{b-bar-border}*/;
 	background: #eeeeee /*{b-bar-background-color}*/;
-	color: #3e3e3e /*{b-bar-color}*/;
+	color: #ffffff /*{b-bar-color}*/;
 	font-weight: bold;
 	text-shadow: 0 /*{b-bar-shadow-x}*/ 1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #ffffff /*{b-bar-shadow-color}*/;
 	background-image: -webkit-gradient(linear, left top, left bottom, from( #f0f0f0 /*{b-bar-background-start}*/), to( #dddddd /*{b-bar-background-end}*/)); /* Saf4+, Chrome */
@@ -1269,7 +1269,7 @@ margin-top:1px;
 	background: -ms-linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	background: linear-gradient(#5F938C, #4E7873) repeat scroll 0 0 #578680;
 	border: 1px solid #35655f;
-	color: #fff;
+	color: #ffffff;
 	font-weight: bold;
 	text-shadow: 0 0px 0 #FFFFFF;
 }
@@ -1288,8 +1288,7 @@ margin-top:1px;
 }
 
 .ui-btn-hover-d {
-	background: #35655f;
-	border: 1px solid #35655f;
+	background: #689B95;
 	color: #FFFFFF;
 	font-weight: bold;
 	text-shadow: 0 1px 1px #111111;
@@ -1304,6 +1303,13 @@ margin-top:1px;
 	color: #FFFFFF;
 }
 
+.ui-btn-active-d {
+    display:box;
+    background:#35655F;
+   
+    
+}
+    
 .ui-btn-down-d {
 	background: #35655f;
 	border: 1px solid #35655f;
@@ -1312,9 +1318,11 @@ margin-top:1px;
 	text-shadow: 0 1px 1px #111111;
 }
 
+
 /* icons for the nav bar */
 .nav-glyphish-example .ui-btn .ui-btn-inner {
 	padding-top: 40px !important;
+    color:#fff;
 
 }
 
@@ -1326,6 +1334,7 @@ margin-top:1px;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 	border-radius: none !important;
+
 }
 
 #contact-us-icon .ui-icon {
