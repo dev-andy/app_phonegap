@@ -932,9 +932,7 @@ a.ui-link-inherit {
 
 .ui-page { background:#fff; /* Change background color of body */
 	
-	backface-visibility:hidden;
--webkit-backface-visibility:hidden; /* Chrome and Safari */
--moz-backface-visibility:hidden; /* Firefox */
+
 
 } 
 .ui-corner-all {
