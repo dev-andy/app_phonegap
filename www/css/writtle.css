@@ -1295,6 +1295,9 @@ margin-top:1px;
 	text-shadow: 0 1px 1px #111111;
 }
 
+.ui-btn-hover-d:visited, .ui-btn-hover-d:hover, .ui-btn-hover-d a.ui-link-inherit {
+    color: #ffffff;
+}
 
 
 .ui-btn-hover-d a.ui-link-inherit {
