@@ -6,8 +6,7 @@
         <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
         <title>Short Courses</title>
         <!-- load css files -->
-        <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"
-        />
+        <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"/>
         <link rel="stylesheet" href="css/writtle.css" />
         <!-- load javascript framworks -->
         <script src="js/jquery.mobile/jquery-1.8.3.min.js"></script>
@@ -17,23 +16,7 @@
         <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/test.js"></script>
         <script type="text/javascript" charset="utf-8">
-            document.addEventListener("deviceready", onDeviceReady, false);
-
-
-            function onDeviceReady() {
-
-                // Hide the splach Screen when the device is ready //
-                navigator.splashscreen.hide();
-                // Show Device info ////
-                // Get the Device Properties when phone is ready //
-                var element = document.getElementById('deviceProperties');
-
-                element.innerHTML = 'Device Name: ' + device.name + '<br />' +
-                    'Device Cordova: ' + device.cordova + '<br />' +
-                    'Device Platform: ' + device.platform + '<br />' +
-                    'Device UUID: ' + device.uuid + '<br />' +
-                    'Device Version: ' + device.version + '<br />';
-            }
+          $( "#idofpanel" ).panel( "open" , optionsHash );
         </script>
         <style type="text/css">
         </style>
@@ -58,7 +41,7 @@
                 </ul>
                 <div id="logo_button" class="ui-left">
                     <ul>
-                        <li><a href="#home" data-direction="reverse" data-transition="slide"><img src="images/icons/logo.png" height="35px" /></a>
+                        <li><a href="#home" data-transition="none"><img src="images/icons/logo.png" height="35px" /></a>
 
                         </li>
                     </ul>
@@ -87,23 +70,33 @@
                     <li><a class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading now .." data-icon="arrow-r" data-iconpos="right" data-transition="none" href="#contact">Contact Us</a>
 
                     </li>
-                      <li>
-                    <a class="show-page-loading-msg" href="#testpage" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading now .." data-icon="arrow-r" data-iconpos="right" data-transition="none">Test page</a>
-
-                    </li>
+                    
                 </ul>
             </div>
             <!-- Content-->
-            <div data-role="footer" data-theme="a" class="footer-docs">
+            <div data-role="footer" data-theme="a" class="footer-docs" id="footer">
                 <p style="text-align:center;">&copy; 2012 Writtle College</p>	<a href="#info" data-icon="info" data-role="button"
                 data-iconpos="notext" id="intro" class="ui-btn-right" data-rel="dialog"
                 data-transition="pop">info</a>
-
+               
             </div>
             <!--footer-->
         </div>
        
 	   
+        
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        
+        
         
         
 <!-- Second Page -->
@@ -164,10 +157,10 @@
                         <li><a href="#" data-rel="back" id="back" data-icon="custom">Back</a>
 
                         </li>
-                        <li><a href="#news" id="news-icon"  data-transition="none" data-direction="reverse" data-icon="custom" class="ui-btn-active-d ui-state-persist">News</a>
+                        <li><a href="#news" id="news-icon"  data-transition="none"  data-icon="custom">News</a>
 
                         </li>
-                        <li><a href="#courses" id="courses-icon"  data-transition="none" data-direction="reverse"data-icon="custom">Courses</a>
+                        <li><a href="#courses" id="courses-icon"  data-transition="none" data-icon="custom">Courses</a>
 
                         </li>
                         <li><a href="#contact" id="contact-us-icon"  data-transition="none" data-icon="custom">Contact Us</a>
@@ -203,7 +196,7 @@
                 </ul>
                 <div id="logo_button" class="ui-left">
                     <ul>
-                        <li><a href="#home" data-transition="slide"><img src="images/icons/logo.png" height="35px" /></a>
+                        <li><a href="#home" data-transition="none"><img src="images/icons/logo.png" height="35px" /></a>
 
                         </li>
                     </ul>
@@ -243,13 +236,13 @@
                         <li><a href="#" data-rel="back" id="back" data-icon="custom">Back</a>
 
                         </li>
-                        <li><a href="#news" id="news-icon" data-icon="custom" class="ui-btn-active-d ui-state-persist">News</a>
+                        <li><a href="#news" id="news-icon" data-transition="none" data-icon="custom" class="ui-btn-active-d ui-state-persist">News</a>
 
                         </li>
-                        <li><a href="#courses" id="courses-icon" data-icon="custom">Courses</a>
+                        <li><a href="#courses" id="courses-icon" data-transition="none" data-icon="custom">Courses</a>
 
                         </li>
-                        <li><a href="#contact" id="contact-us-icon" data-icon="custom">Contact Us</a>
+                        <li><a href="#contact" id="contact-us-icon" data-transition="none" data-icon="custom">Contact Us</a>
 
                         </li>
                     </ul>
@@ -294,7 +287,7 @@
                 </ul>
                 <div id="logo_button" class="ui-left">
                     <ul>
-                        <li><a href="#home" data-transition="slide"><img src="images/icons/logo.png" height="35px" /></a>
+                        <li><a href="#home" data-transition="none"><img src="images/icons/logo.png" height="35px" /></a>
 
                         </li>
                     </ul>
@@ -398,47 +391,10 @@
         
             
             
-            
-            <div data-role="page" id="testpage">
-     
-            <div data-role="controlgroup">
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="false" data-msgtext="" data-icon="arrow-r" data-iconpos="right">Default loader</button>
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-icon="arrow-r" data-iconpos="right">Text only</button>
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-icon="arrow-r" data-iconpos="right">Theme a</button>
-                    <button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme b" data-icon="arrow-r" data-iconpos="right">Theme b</button>
-                    <button class="show-page-loading-msg" data-theme="c" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme c" data-icon="arrow-r" data-iconpos="right">Theme c</button>
-                    <button class="show-page-loading-msg" data-theme="d" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme d" data-icon="arrow-r" data-iconpos="right">Theme d</button>
-                    <button class="show-page-loading-msg" data-theme="e" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme e" data-icon="arrow-r" data-iconpos="right">Theme e</button>
-                    <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-icon="arrow-r" data-html="<span class='ui-bar ui-overlay-c ui-corner-all'><img src='../_assets/images/jquery-logo.png' /><h2>is loading for you ...</h2></span>" data-iconpos="right">Custom HTML</button>
-                    <button class="hide-page-loading-msg" data-icon="delete" data-iconpos="right">Hide</button>
-                </div> 
-            </div>
-            
+          
             
             
             <script type="text/javascript">
-        
-          $(document).on("click", ".show-page-loading-msg", function() {
-            var $this = $( this ),
-                theme = $this.jqmData("theme") || $.mobile.loader.prototype.options.theme,
-                msgText = $this.jqmData("msgtext") || $.mobile.loader.prototype.options.text,
-                textVisible = $this.jqmData("textvisible") || $.mobile.loader.prototype.options.textVisible,
-                textonly = !!$this.jqmData("textonly");
-                html = $this.jqmData("html") || "";
-            $.mobile.loading( 'show', {
-                    text: msgText,
-                    textVisible: textVisible,
-                    theme: theme,
-                    textonly: textonly,
-                    html: html
-            });
-        })
-        .on("click", ".hide-page-loading-msg", function() {
-            $.mobile.loading( 'hide' );
-        });
-        
-        
-            
         
         
         
