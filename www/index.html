@@ -15,9 +15,7 @@
         <!-- load javascript for the page -->
         <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/test.js"></script>
-        <script type="text/javascript" charset="utf-8">
-          $( "#idofpanel" ).panel( "open" , optionsHash );
-        </script>
+       
         <style type="text/css">
         </style>
     </head>
@@ -396,7 +394,7 @@
                 <!-- /navbar -->
             </div>
             <!-- /footer -->
-        </div>
+       
         <!-- /page -->
 		
         
@@ -536,14 +534,9 @@
 
             </div>
             <div data-role="content">
-                <div class="ui-grid-a" id="videolist">
-                    
-                        
-                        
-                        
-                    </div>  <!-- Grid -->  
+                <div class="ui-grid-a" id="videolist"></div>  <!-- Grid -->  
                 
-                </div> <!-- Content -->
+            </div> <!-- Content -->
                 
                     
                     
@@ -576,22 +569,17 @@
                 </div> <!-- Content -->
                 
                     
-                    
-                
+            
 
                 
                 
            
     </div> <!-- End page -->
+
     
     
-    
-            
-            <script type="text/javascript" src="http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback=listvideos">
-        
-        
-        
-            </script>
+            <!-- You Tube Api Json code  -->
+            <script type="text/javascript" charset="utf-8" src="http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback=listvideos"></script>
             
     
         <script type="text/javascript" charset="utf-8" src="apis/device.js"></script>
