@@ -76,6 +76,11 @@
 
                     </li>
                     
+                
+                     <li><a class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading now .." data-icon="arrow-r" data-iconpos="right" data-transition="none" href="#video">video</a>
+
+                    </li>
+                    
                 </ul>
                 
                
@@ -523,11 +528,66 @@
         <!-- info page -->
         
             
+    
+    
+     <div data-role="page" id="video">
+            <div data-role="header" data-theme="a">
+                 <h1>video</h1>
+
+            </div>
+            <div data-role="content">
+                <div class="ui-grid-a" id="videolist">
+                    
+                        
+                        
+                        
+                    </div>  <!-- Grid -->  
+                
+                </div> <!-- Content -->
+                
+                    
+                    
+                
+
+                
+                
+           
+    </div> <!-- End page -->
             
           
             
+    
+    
+     <div data-role="page" id="videoplayer">
+            <div data-role="header" data-theme="a">
+                <a href="#video" data-icon="back" data-iconpos="notext"
+                data-direction="reverse">vidoes</a>
+                 <h1>videos</h1>
+
+            </div>
+            <div data-role="content">
+                
+                    <div id="myplayer"></div>
+                        
+                        
+                        
+                  
+                
+                </div> <!-- Content -->
+                
+                    
+                    
+                
+
+                
+                
+           
+    </div> <!-- End page -->
+    
+    
+    
             
-            <script type="text/javascript">
+            <script type="text/javascript" src="http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback=listvideos">
         
         
         

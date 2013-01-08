@@ -59,4 +59,51 @@
         
         
             
+/*************************************************************************
+                    You Tube json feed api 
+*************************************************************************/
+
+function listvideos(data) {
+    console.log(data);
+    
+    var output = '';
+    
+    for ( var i=0; i<data.feed.entry.length; i++) {
+    
+    // Load the first title on youtube //
+    var title = data.feed.entry[i].title.$t;
+    
+    //load the description from youtube  //
+    var description = data.feed.entry[i].media$group.media$description.$t;
+    // Load image //
+    var thumbnail = data.feed.entry[i].media$group.media$thumbnail[0].url;
+    // id of the video //
+    var id = data.feed.entry[i].id.$t.substring(38);
+    
         
+        var blocktype = ((i % 2)===1) ? 'b': 'a';
+        
+        output += '<div class="ui-block-' + blocktype + '">';
+        output += '<a href="#videoplayer" data-transition="none" onclick="playvideo(\'' +  id +'\',\'' + title + '\',\'' + escape(description) + '\')">';
+        output += '<h3 class="movietitle">'+ title +'</h3>';
+        output += '<img src="' + thumbnail + '"  alt="'+ title +'" />';
+        output += '</a>';
+        output += '</div>';
+        
+       
+        
+    } 
+    
+     $('#videolist').html(output);
+}
+
+
+function playvideo(id, title, description) {
+    var output ='';
+   
+    output += '<h1>' + title + '</h1>';
+     output +='<iframe src="http://www.youtube.com/embed/'+ id +'?wmode=transparent&amp;HD=0&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>';    
+	output += '<p>' + unescape(description) + '</p>';
+	$('#myplayer').html(output);
+    
+}    

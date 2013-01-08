@@ -1401,3 +1401,37 @@ font-size:12px
 	border-bottom: 1px dashed #CCC;
   
 }
+
+/* You tube page */
+#videolist img {
+	display: block;
+	width: 90%;
+}
+
+#videolist h3 {
+	margin: 15px 0 5px 0;
+	height: 35px;
+	overflow: hidden;
+	font-size: 0.8em;
+}
+
+#videolist img {
+	width: 80%;
+}
+
+#videolist a {
+ text-decoration: none;
+color: #777;        
+}    
+
+#videoplayer iframe {
+ width:100%;
+    
+min-height: 50%;       
+    
+}    
+
+#myplayer p {
+ padding: 0 5%;   
+    
+}    
