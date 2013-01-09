@@ -38,6 +38,7 @@
 
 
 // Load the loading spanner on page click //
+/*
           $(document).on("click", ".show-page-loading-msg", function() {
             var $this = $( this ),
                 theme = $this.jqmData("theme") || $.mobile.loader.prototype.options.theme,
@@ -57,7 +58,7 @@
             $.mobile.loading( 'hide' );
         });
         
-        
+        */
             
 /*************************************************************************
                     You Tube json feed api 
