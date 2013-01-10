@@ -6,6 +6,14 @@
     <title>loading demo</title>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css">
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script>$(document).bind("mobileinit", function(){
+$.mobile.defaultPageTransition = 'none';
+$.mobile.buttonMarkup.hoverDelay= 2500;
+$.mobile.allowCrossDomainPages = true;
+$.support.cors = true;
+$.mobile.pushStateEnabled = false;
+$.mobile.orientationChangeEnabled = true;
+});</script>
     <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head>
 <body>
@@ -22,27 +30,22 @@
                     <button class="show-page-loading-msg" data-theme="e" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme e" data-icon="arrow-r" data-iconpos="right">Theme e</button>
                     <button class="show-page-loading-msg" data-theme="a" data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-icon="arrow-r" data-html="<span class='ui-bar ui-overlay-c ui-corner-all'><img src='../_assets/images/jquery-logo.png' /><h2>is loading for you ...</h2></span>" data-iconpos="right">Custom HTML</button>
                     <button class="hide-page-loading-msg" data-icon="delete" data-iconpos="right">Hide</button>
-                </div> 
+                    
+                        <a href="video.html" id="test"rel="external" data-ajax="false" > Video </a>    
+                     
+    </div> 
 </div>
 <script>
-        $(document).on("click", ".show-page-loading-msg", function() {
-            var $this = $( this ),
-                theme = $this.jqmData("theme") || $.mobile.loader.prototype.options.theme,
-                msgText = $this.jqmData("msgtext") || $.mobile.loader.prototype.options.text,
-                textVisible = $this.jqmData("textvisible") || $.mobile.loader.prototype.options.textVisible,
-                textonly = !!$this.jqmData("textonly");
-                html = $this.jqmData("html") || "";
-            $.mobile.loading( 'show', {
-                    text: msgText,
-                    textVisible: textVisible,
-                    theme: theme,
-                    textonly: textonly,
-                    html: html
-            });
-        })
-        .on("click", ".hide-page-loading-msg", function() {
-            $.mobile.loading( 'hide' );
-        });
+
+     
+    
+    
+    
+$('#test').live('click',function(e){
+    $.mobile.showPageLoadingMsg();
+    setTimeout(initialLogin(),300);
+});
+
     </script>
  
 </body>

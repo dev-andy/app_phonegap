@@ -63,6 +63,14 @@
 /*************************************************************************
                     You Tube json feed api 
 *************************************************************************/
+$('.show-page-loading-msg').live('click',function(e){
+    $.mobile.showPageLoadingMsg();
+    setTimeout(initialLogin(),300);
+
+});
+
+
+
 
 function listvideos(data) {
     console.log(data);
@@ -94,8 +102,9 @@ function listvideos(data) {
        
         
     } 
-    
+     
      $('#videolist').html(output);
+   
 }
 
 
