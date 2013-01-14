@@ -18,6 +18,54 @@
        
         <style type="text/css">
         </style>
+        
+        <script type="text/javascript" >
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+       checkConnection();
+    }
+            
+            
+            
+    function nonetwork() {
+        
+     if ( network ==  states[Connection.NONE]) {
+         
+          alert('No network');
+         
+        
+    }    
+            
+            
+
+    function checkConnection() {
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.NONE]     = 'No network connection';
+
+        alert('Connection type: ' + states[networkState]);
+         
+         var network =  states[networkState];
+    }
+
+    </script>
+        
+        
+        
+        
+        
+        
     </head>
     
     <body>
@@ -30,6 +78,8 @@
     
      <div data-role="page" id="video">
             <div data-role="header" data-theme="a">
+                 <a href="index.html" data-icon="back" data-iconpos="notext"
+                data-direction="reverse">vidoes</a>
                  <h1>video</h1>
 
             </div>
