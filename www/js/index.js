@@ -63,12 +63,6 @@
 /*************************************************************************
                     You Tube json feed api 
 *************************************************************************/
-$('.show-page-loading-msg').live('click',function(e){
-    $.mobile.showPageLoadingMsg();
-    setTimeout(initialLogin(),300);
-
-});
-
 
 
 
@@ -117,3 +111,75 @@ function playvideo(id, title, description) {
 	$('#myplayer').html(output);
     
 }    
+
+
+
+
+
+ $('#start').click(function() {
+    
+     
+      $.ajax({
+        url: 'http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback"',
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        timeout: 5000,
+        success: function(data, status){
+            //data loaded
+            
+              $.mobile.showPageLoadingMsg();
+             var output = '';
+        
+        for ( var i=0; i<data.feed.entry.length; i++) {
+        
+        // Load the first title on youtube //
+        var title = data.feed.entry[i].title.$t;
+        
+        //load the description from youtube  //
+        var description = data.feed.entry[i].media$group.media$description.$t;
+        // Load image //
+        var thumbnail = data.feed.entry[i].media$group.media$thumbnail[0].url;
+        // id of the video //
+        var id = data.feed.entry[i].id.$t.substring(38);
+        
+            
+            var blocktype = ((i % 2)===1) ? 'b': 'a';
+            
+            output += '<div class="ui-block-' + blocktype + '">';
+            output += '<a href="#videoplayer" data-transition="none" onclick="playvideo(\'' +  id +'\',\'' + title + '\',\'' + escape(description) + '\')">';
+            output += '<h3 class="movietitle">'+ title +'</h3>';
+            output += '<img src="' + thumbnail + '"  alt="'+ title +'" />';
+            output += '</a>';
+            output += '</div>';
+            
+           
+        
+    } 
+     
+     $('#videolist').html(output);
+        
+       //$.mobile.hidePageLoadingMsg();
+        
+        
+        
+        
+	},
+	error: function(){
+		//error loading data
+        
+        
+        $('#videolist').html('Error Loading...');
+        
+        
+	}
+});
+     
+     
+     
+     
+     
+     
+     
+ });     
+
+
