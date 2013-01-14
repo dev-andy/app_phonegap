@@ -19,49 +19,7 @@
         <style type="text/css">
         </style>
         
-        <script type="text/javascript" >
-        
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is loaded and it is now safe to make calls Cordova methods
-    //
-    function onDeviceReady() {
-       checkConnection();
-    }
-            
-            
-            
-    function nonetwork() {
-        
-     if ( network ==  states[Connection.NONE]) {
-         
-          alert('No network');
-         
-        
-    }    
-            
-            
-
-    function checkConnection() {
-        var networkState = navigator.connection.type;
-
-        var states = {};
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.NONE]     = 'No network connection';
-
-        alert('Connection type: ' + states[networkState]);
-         
-         var network =  states[networkState];
-    }
-
-    </script>
-        
-        
+ 
         
         
         
@@ -78,7 +36,7 @@
     
      <div data-role="page" id="video">
             <div data-role="header" data-theme="a">
-                 <a href="index.html" data-icon="back" data-iconpos="notext"
+                 <a href="/" data-icon="back" data-iconpos="notext" rel="external"
                 data-direction="reverse">vidoes</a>
                  <h1>video</h1>
 
@@ -129,42 +87,42 @@
     <script>
         $(document).ready(function() {
              $.mobile.showPageLoadingMsg();
-        $.ajax({
-        url: 'http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback"',
-        dataType: 'jsonp',
-        jsonp: 'callback',
-        timeout: 5000,
-        success: function(data, status){
-            //data loaded
-            
+                $.ajax({
+                url: 'http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback"',
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                timeout: 7000,
+                success: function(data, status){
+                    //data loaded
+                    
              
-             var output = '';
+                    var output = '';
         
-        for ( var i=0; i<data.feed.entry.length; i++) {
-        
-        // Load the first title on youtube //
-        var title = data.feed.entry[i].title.$t;
-        
-        //load the description from youtube  //
-        var description = data.feed.entry[i].media$group.media$description.$t;
-        // Load image //
-        var thumbnail = data.feed.entry[i].media$group.media$thumbnail[0].url;
-        // id of the video //
-        var id = data.feed.entry[i].id.$t.substring(38);
-        
-            
-            var blocktype = ((i % 2)===1) ? 'b': 'a';
-            
-            output += '<div class="ui-block-' + blocktype + '">';
-            output += '<a href="#videoplayer" data-transition="none" onclick="playvideo(\'' +  id +'\',\'' + title + '\',\'' + escape(description) + '\')">';
-            output += '<h3 class="movietitle">'+ title +'</h3>';
-            output += '<img src="' + thumbnail + '"  alt="'+ title +'" />';
-            output += '</a>';
-            output += '</div>';
-            
-           
-        
-    } 
+                for ( var i=0; i<data.feed.entry.length; i++) {
+                
+                // Load the first title on youtube //
+                var title = data.feed.entry[i].title.$t;
+                
+                //load the description from youtube  //
+                var description = data.feed.entry[i].media$group.media$description.$t;
+                // Load image //
+                var thumbnail = data.feed.entry[i].media$group.media$thumbnail[0].url;
+                // id of the video //
+                var id = data.feed.entry[i].id.$t.substring(38);
+                
+                    
+                    var blocktype = ((i % 2)===1) ? 'b': 'a';
+                    
+                    output += '<div class="ui-block-' + blocktype + '">';
+                    output += '<a href="#videoplayer" data-transition="none" onclick="playvideo(\'' +  id +'\',\'' + title + '\',\'' + escape(description) + '\')">';
+                    output += '<h3 class="movietitle">'+ title +'</h3>';
+                    output += '<img src="' + thumbnail + '"  alt="'+ title +'" />';
+                    output += '</a>';
+                    output += '</div>';
+                    
+                   
+                
+            } 
      
      $('#videolist').html(output);
         
@@ -180,6 +138,7 @@
         
         $('#videolist').html('<h1>Error Loading...</h1>');
         
+        $.mobile.hidePageLoadingMsg();
         
 	}
             

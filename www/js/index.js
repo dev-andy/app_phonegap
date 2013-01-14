@@ -4,7 +4,11 @@
             function onDeviceReady() {
 
                 // Hide the splach Screen when the device is ready //
-                navigator.splashscreen.hide();
+                
+                
+                //navigator.splashscreen.hide();
+               
+                
                 // Show Device info ////
                 // Get the Device Properties when phone is ready //
                 var element = document.getElementById('deviceProperties');
@@ -64,7 +68,7 @@
                     You Tube json feed api 
 *************************************************************************/
 
-
+/*
 
 function listvideos(data) {
     console.log(data);
@@ -100,7 +104,7 @@ function listvideos(data) {
      $('#videolist').html(output);
    
 }
-
+*/
 
 function playvideo(id, title, description) {
     var output ='';
@@ -115,7 +119,7 @@ function playvideo(id, title, description) {
 
 
 
-
+/*
  $('#start').click(function() {
     
      
@@ -180,6 +184,7 @@ function playvideo(id, title, description) {
      
      
      
- });     
+ });  
+*/
 
 
