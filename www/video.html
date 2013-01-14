@@ -78,6 +78,7 @@
 
     <script>
         $(document).ready(function() {
+             $.mobile.showPageLoadingMsg();
         $.ajax({
         url: 'http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback"',
         dataType: 'jsonp',
@@ -86,7 +87,7 @@
         success: function(data, status){
             //data loaded
             
-              $.mobile.showPageLoadingMsg();
+             
              var output = '';
         
         for ( var i=0; i<data.feed.entry.length; i++) {
@@ -117,7 +118,7 @@
      
      $('#videolist').html(output);
         
-       $.mobile.hidePageLoadingMsg();
+      $.mobile.hidePageLoadingMsg();
         
         
         
@@ -127,11 +128,15 @@
 		//error loading data
         
         
-        $('#videolist').html('Error Loading...');
+        $('#videolist').html('<h1>Error Loading...</h1>');
         
         
 	}
+            
+           //$.mobile.hidePageLoadingMsg();
+            
 });
+            
 
         });     
         
