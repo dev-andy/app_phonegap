@@ -1403,16 +1403,24 @@ font-size:12px
 }
 
 /* You tube page */
+
+#videolist {
+ padding:0 0 0 6%; 
+  
+    
+}
+
 #videolist img {
 	display: block;
 	width: 90%;
 }
 
 #videolist h3 {
-	margin: 15px 0 5px 0;
+	margin: 15px 0px 5px 0px;
 	height: 35px;
 	overflow: hidden;
 	font-size: 0.8em;
+    width: 80%;
 }
 
 #videolist img {
@@ -1425,13 +1433,22 @@ color: #777;
 }    
 
 #videoplayer iframe {
- width:100%;
+   // width:100%;
     
-min-height: 50%;       
     
-}    
-
+       
+    
+}
+video {
+     width:100%
+}
+#myplayer {
+    height:auto;
+    
+  width: 100%;   
+    
+}
 #myplayer p {
- padding: 0 5%;   
+ padding: 0 2%;   
     
 }    

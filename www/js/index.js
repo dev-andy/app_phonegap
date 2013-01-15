@@ -108,9 +108,11 @@ function listvideos(data) {
 
 function playvideo(id, title, description) {
     var output ='';
-   
-    output += '<h1>' + title + '</h1>';
-     output +='<iframe src="http://www.youtube.com/embed/'+ id +'?wmode=transparent&amp;HD=0&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>';    
+    
+   output += '<h1>' + unescape(title) + '</h1>';
+
+    // output +='<div class="player"><iframe width="425" height="349" src="http://www.youtube.com/embed/'+ id +'?wmode=transparent&amp;HD=0&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe></div>';    
+    output +='<div class="player"><iframe width="425" height="349" src="http://www.youtube.com/embed/'+ id +'></iframe></div>';
 	output += '<p>' + unescape(description) + '</p>';
 	$('#myplayer').html(output);
     

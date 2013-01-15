@@ -13,9 +13,66 @@
         <script src="js/jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script>
         <!-- load javascript for the page -->
-        <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/test.js"></script>
-       
+         <script type="text/javascript" charset="utf-8" src="js/jquery.fitvids.min.js"></script>
+        
+         <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
+         checkConnection();
+    }
+
+    // process the confirmation dialog result
+    function onConfirm(buttonIndex) {
+        alert('You selected button ' + buttonIndex);
+    }
+
+    // Show a custom confirmation dialog
+    //
+    function showConfirm() {
+        navigator.notification.confirm(
+            'You are the winner!',  // message
+            onConfirm,              // callback to invoke with index of button pressed
+            'Game Over',            // title
+            'Restart,Exit'          // buttonLabels
+        );
+    }
+
+             
+             
+             
+             
+function checkConnection() {
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[Connection.UNKNOWN]  = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI]     = 'WiFi connection';
+        states[Connection.CELL_2G]  = 'Cell 2G connection';
+        states[Connection.CELL_3G]  = 'Cell 3G connection';
+        states[Connection.CELL_4G]  = 'Cell 4G connection';
+        states[Connection.NONE]     = 'No network connection';
+
+        alert('Connection type: ' + states[networkState]);
+    }             
+    </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <style type="text/css">
         </style>
         
@@ -29,61 +86,97 @@
     <body>
 
         
-<!-- Home Page -->
+<!-- Video List  Page -->
      
-            
-    
-    
      <div data-role="page" id="video">
             <div data-role="header" data-theme="a">
-                 <a href="/" data-icon="back" data-iconpos="notext" rel="external"
+                 <a href="index.html" data-icon="back"  data-iconpos="notext" rel="external"
                 data-direction="reverse">vidoes</a>
-                 <h1>video</h1>
+                 <h1>Video List </h1>
 
             </div>
             <div data-role="content">
+                 <p><a href="#" onclick="showConfirm(); return false;">Show Confirm</a></p>
+                <p>A dialog box will report the network state.</p>
                 <div class="ui-grid-a" id="videolist"></div>  <!-- Grid -->  
                 
             </div> <!-- Content -->
-                
-                    
-                    
-                
-
-                
-                
-           
-    </div> <!-- End page -->
+               <div data-role="footer" data-theme="a" class="footer-docs" id="footer">
+                <p style="text-align:center;">&copy; 2012 Writtle College</p>	<a href="#info" data-icon="info" data-role="button"
+                data-iconpos="notext" id="intro" class="ui-btn-right" data-rel="dialog"
+                data-transition="pop">info</a>
+               
+            </div>
+            <!--footer-->
+    </div> <!-- End Video List page -->
             
           
             
     
-    
+    <!-- Video Player Page -->
      <div data-role="page" id="videoplayer">
             <div data-role="header" data-theme="a">
-                <a href="#video" data-icon="back" data-iconpos="notext"
-                data-direction="reverse">vidoes</a>
-                 <h1>videos</h1>
+                <a href="#video" data-icon="back"  data-iconpos="text"
+                data-direction="reverse">back</a>
+                 <h1></h1>
 
             </div>
             <div data-role="content">
+               
+                    <div id="myplayer"> </div>
                 
-                    <div id="myplayer"></div>
-                        
-                        
-                        
-                  
-                
+
                 </div> <!-- Content -->
                 
+ 
+    </div> <!-- End Video Player Page -->
+
+        
+        
+        
+        
+        
+        
+         <!-- Info Page -->
+        <div data-role="page" id="info">
+            <div data-role="header" data-theme="a">
+                 <h1>Info About App</h1>
+
+            </div>
+            <div data-role="content">
+                <p>Version <b>0.0.1 Dev</b>
+                <p>Bug List</p>
+                <ul>
+                    <li> Navbar bug in the active style.</li>
+                    <li>App File to big in size no more the 3mb</li>
+                    </ul>
                     
-            
+                    
+                
 
                 
-                
-           
-    </div> <!-- End page -->
-
+                <p id="deviceProperties">Loading device properties...</p>
+            </div>
+            </div>
+        
+        <!-- info page -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     <script>
         $(document).ready(function() {
              $.mobile.showPageLoadingMsg();
@@ -102,6 +195,7 @@
                 
                 // Load the first title on youtube //
                 var title = data.feed.entry[i].title.$t;
+                    title = escape(title);
                 
                 //load the description from youtube  //
                 var description = data.feed.entry[i].media$group.media$description.$t;
@@ -115,7 +209,7 @@
                     
                     output += '<div class="ui-block-' + blocktype + '">';
                     output += '<a href="#videoplayer" data-transition="none" onclick="playvideo(\'' +  id +'\',\'' + title + '\',\'' + escape(description) + '\')">';
-                    output += '<h3 class="movietitle">'+ title +'</h3>';
+                    output += '<h3 class="movietitle">'+ unescape(title) +'</h3>';
                     output += '<img src="' + thumbnail + '"  alt="'+ title +'" />';
                     output += '</a>';
                     output += '</div>';
@@ -142,7 +236,7 @@
         
 	}
             
-           //$.mobile.hidePageLoadingMsg();
+           
             
 });
             
@@ -150,8 +244,33 @@
         });     
         
         
+function playvideo(id, title, description) {
+   
+           
+            var output ='';
+    
+            output += '<h1>' + unescape(title) + '</h1>';
+            output +='<iframe width="425" height="349" src="http://www.youtube.com/embed/'+ id +'?wmode=transparent&amp;HD=0&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>';    
+            output += '<p>' + unescape(description) + '</p>';
+            $('#myplayer').html(output);
+                   
+                   // Load fitvids /// 
+                    $("#myplayer").fitVids();
+                    
+    
+}    
+        
+        
+    
+        
+        
         
         </script>
+        
+        
+        
+        
+        
     
             <!-- You Tube Api Json code  -->
             <!--<script type="text/javascript" charset="utf-8" src="http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback=listvideos"></script>-->
