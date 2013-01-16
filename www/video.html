@@ -89,7 +89,7 @@ function checkConnection() {
 <!-- Video List  Page -->
      
      <div data-role="page" id="video">
-            <div data-role="header" data-theme="a" id="headerMenu">
+            <div data-role="header" data-theme="a">
                  <a href="index.html" data-icon="back"  data-iconpos="notext" rel="external"
                 data-direction="reverse">vidoes</a>
                  <h1>Video List </h1>
@@ -100,7 +100,9 @@ function checkConnection() {
                 <p>A dialog box will report the network state.</p>-->
                 <div class="ui-grid-a" id="videolist"></div>  <!-- Grid -->  
                 
-            
+            </div> <!-- Content -->
+              
+            <!--footer-->
     </div> <!-- End Video List page -->
             
           
@@ -173,7 +175,6 @@ function checkConnection() {
     <script>
         $(document).ready(function() {
              $.mobile.showPageLoadingMsg();
-          
            /* $.mobile.fixedToolbars.hide(true);*/
                 $.ajax({
                 url: 'http://gdata.youtube.com/feeds/users/writtlecollege1/uploads?alt=json-in-script&max-results=30&callback"',
@@ -212,12 +213,11 @@ function checkConnection() {
                    
                 
             } 
-    
+     
      $('#videolist').html(output);
         
       $.mobile.hidePageLoadingMsg();
       /*$.mobile.fixedToolbars.show(true);*/
-                   
         
         
         
