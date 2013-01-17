@@ -18,37 +18,16 @@
          <script type="text/javascript" charset="utf-8">
 
     // Wait for Cordova to load
-    //
+    // 
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    // Cordova is ready
+    // Cordova is loaded and it is now safe to make calls Cordova methods
     //
     function onDeviceReady() {
-        // Empty
-         //checkConnection();
+        checkConnection();
     }
 
-    // process the confirmation dialog result
-    function onConfirm(buttonIndex) {
-        alert('You selected button ' + buttonIndex);
-    }
-
-    // Show a custom confirmation dialog
-    //
-    function showConfirm() {
-        navigator.notification.confirm(
-            'You are the winner!',  // message
-            onConfirm,              // callback to invoke with index of button pressed
-            'Game Over',            // title
-            'Restart,Exit'          // buttonLabels
-        );
-    }
-
-             
-             
-             
-             
-function checkConnection() {
+    function checkConnection() {
         var networkState = navigator.connection.type;
 
         var states = {};
@@ -61,20 +40,9 @@ function checkConnection() {
         states[Connection.NONE]     = 'No network connection';
 
         alert('Connection type: ' + states[networkState]);
-    }             
+    }
+
     </script>
-        
-        
-        
-        
-            
-        
-        
-        <style type="text/css">
-        </style>
-        
- 
-        
         
         
         
@@ -171,6 +139,7 @@ function checkConnection() {
         
     <script>
         $(document).ready(function() {
+             
              $.mobile.showPageLoadingMsg();
            /* $.mobile.fixedToolbars.hide(true);*/
                 $.ajax({
@@ -214,7 +183,7 @@ function checkConnection() {
      $('#videolist').html(output);
         
       $.mobile.hidePageLoadingMsg();
-      /*$.mobile.fixedToolbars.show(true);*/
+     
         
         
         
@@ -234,9 +203,25 @@ function checkConnection() {
 });
             
 
-        });     
+        });  // End doc ready   
+        
+     
         
         
+        $( '#videoplayer' ).live( 'pageinit',function(event){
+           //  $.mobile.showPageLoadingMsg();
+             setTimeout($.mobile.showPageLoadingMsg, 5);  
+            
+           
+            $.mobile.loadPage();
+             //$.mobile.hidePageLoadingMsg();
+            
+            alert( 'This page was just enhanced by jQuery Mobile!' );
+              $.mobile.hidePageLoadingMsg();
+        });
+        
+        
+      
 function playvideo(id, title, description) {
    
            
