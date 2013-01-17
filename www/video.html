@@ -28,8 +28,7 @@
     }
 
     function checkConnection() {
-        var networkState = navigator.connection.type;
-
+        var networkState = navigator.network.connection.type; 
         var states = {};
         states[Connection.UNKNOWN]  = 'Unknown connection';
         states[Connection.ETHERNET] = 'Ethernet connection';
@@ -216,7 +215,7 @@
             $.mobile.loadPage();
              //$.mobile.hidePageLoadingMsg();
             
-            alert( 'This page was just enhanced by jQuery Mobile!' );
+          //  alert( 'This page was just enhanced by jQuery Mobile!' );
               $.mobile.hidePageLoadingMsg();
         });
         
