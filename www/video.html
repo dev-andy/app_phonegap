@@ -45,7 +45,7 @@
         //states[Connection.NONE]     = 'No network connection';
 
        // alert('Connection type: ' + states[networkState]);
-        alert('Connection type: ' + networkState);
+       // alert('Connection type: ' + networkState);
         
         
     if (networkState == Connection.NONE) {
@@ -61,6 +61,7 @@
     function alertDismissed() {
         // do something
         window.location.href = "index.html";
+         navigator.app.exitApp();
     }
 
     // Show a custom alertDismissed
@@ -71,7 +72,7 @@
             'You have no network ... ',  // message
             alertDismissed,         // callback
             'Error',            // title
-            'Done'                  // buttonName
+            'Ok'                  // buttonName
         ); 
   
              }
@@ -227,7 +228,12 @@
 	},
 	error: function(){
 		//error loading data
-        
+         navigator.notification.alert(
+            'Error Timed out ',  // message
+            alertDismissed1,         // callback
+            'Error',            // title
+            'retrye'                  // buttonName
+        ); 
         
         $('#videolist').html('<h1>Error Loading...</h1>');
         
@@ -243,17 +249,17 @@
         });  // End doc ready   
         
      
-        
+      
         
         $( '#videoplayer' ).live( 'pageinit',function(event){
-           //  $.mobile.showPageLoadingMsg();
-             setTimeout($.mobile.showPageLoadingMsg, 5);  
+            $.mobile.showPageLoadingMsg();
+            // setTimeout($.mobile.showPageLoadingMsg, 5);  
             
            
-            $.mobile.loadPage();
+           $.mobile.loadPage();
              //$.mobile.hidePageLoadingMsg();
             
-          //  alert( 'This page was just enhanced by jQuery Mobile!' );
+            //alert( 'This page was just enhanced by jQuery Mobile!' );
               $.mobile.hidePageLoadingMsg();
         });
         
@@ -277,7 +283,9 @@ function playvideo(id, title, description) {
 }    
         
         
-    
+      $( document ).bind( "pagecreate", function( event ) {
+        $.mobile.showPageLoadingMsg();
+      });
         
         
         
