@@ -252,15 +252,21 @@
       
         
         $( '#videoplayer' ).live( 'pageinit',function(event){
-            $.mobile.showPageLoadingMsg();
-            // setTimeout($.mobile.showPageLoadingMsg, 5);  
+            //$.mobile.showPageLoadingMsg();
+             setTimeout($.mobile.showPageLoadingMsg, 5);  
             
            
-           $.mobile.loadPage();
+           //$.mobile.loadPage();
              //$.mobile.hidePageLoadingMsg();
             
             //alert( 'This page was just enhanced by jQuery Mobile!' );
-              $.mobile.hidePageLoadingMsg();
+             // $.mobile.hidePageLoadingMsg();
+        });
+        
+        
+        $('#videoplayer').blind('loadPage',function(event){
+            
+             $.mobile.hidePageLoadingMsg();
         });
         
         
