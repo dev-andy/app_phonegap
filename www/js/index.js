@@ -32,13 +32,7 @@
 
 // Add Js scripts here //
 
-// removing the transition from the page  //
-  $(document).bind("mobileinit", function() {
-	      $.mobile.page.prototype.options.addBackBtn = true;
-	      $.mobile.defaultPageTransition = 'none';
-	      $.mobile.useFastClick  = false;
-	});
-     
+/
 
 
 // Load the loading spanner on page click //
@@ -105,19 +99,6 @@ function listvideos(data) {
    
 }
 */
-
-function playvideo(id, title, description) {
-    var output ='';
-    
-   output += '<h1>' + unescape(title) + '</h1>';
-
-    // output +='<div class="player"><iframe width="425" height="349" src="http://www.youtube.com/embed/'+ id +'?wmode=transparent&amp;HD=0&amp;rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe></div>';    
-    output +='<div class="player"><iframe width="425" height="349" src="http://www.youtube.com/embed/'+ id +'></iframe></div>';
-	output += '<p>' + unescape(description) + '</p>';
-	$('#myplayer').html(output);
-    
-}    
-
 
 
 

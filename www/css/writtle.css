@@ -1433,9 +1433,8 @@ color: #777;
 }    
 
 #videoplayer iframe {
-   // width:100%;
-    
-    
+    width:100%;
+ 
        
     
 }
@@ -1443,9 +1442,11 @@ video {
      width:100%
 }
 #myplayer {
-    height:auto;
-    
-  width: 80%;   
+   margin:0 auto;
+        padding: 0 auto;
+   
+   
+   
     
 }
 #myplayer p {
