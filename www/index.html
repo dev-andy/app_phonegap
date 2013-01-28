@@ -166,7 +166,7 @@
             </div>
             <!-- /content -->
             
-            <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example" >
                 <div data-role="navbar" data-iconpos="top" class="ui-body-d">
                     <ul>
                         <li><a href="#" data-rel="back" id="back" data-icon="custom">Back</a>
@@ -446,6 +446,14 @@
                     <p>Writtle College continues to offer a variety of short courses, ideal for
                         learning specialist crafts as a hobby or to gain accreditation for technical
                         skills. To view all related short courses simply click on the buttons.</p>
+                    <center>
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <a href="#email" data-role="button">Email</a>
+                        <a href="index.html" data-role="button">No</a>
+                        <a href="index.html" data-role="button">Maybe</a>
+                    </div>
+                   </center>
+                    
                 </div>
                 
                
@@ -510,6 +518,205 @@
         </div>
         <!--footer-->
         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+           <!-- Start of contact page -->
+        <div data-role="page" id="email" class="type-interior" data-theme="b">
+            <!-- index page header -->
+            <div data-role="header" data-theme="a" data-position="fixed" data-position="inline">
+                	<h1>Email Us </h1>
+
+                <!-- Phone Buttom -->
+                <ul>
+                    <li>	<a class="phone" id="phone" target="_self" href="tel:01245424200">
+				<img src="images/icons/phone.png" height="35" width="50"  alt="Call">
+				</a>
+
+                    </li>
+                </ul>
+                <div id="logo_button" class="ui-left">
+                    <ul>
+                        <li><a href="#home" data-transition="none"><img src="images/icons/logo.png" height="35px" /></a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header -->
+            <!-- Main Image tags -->
+        
+            <div data-role="content">
+                <div id="main-content">
+                    	<h1>Contact Us via Email </h1>
+
+                            <p>Writtle College continues to offer a variety of short courses, ideal for
+                               learning specialist crafts as a hobby or to gain accreditation for technical
+                                skills. To view all related short courses simply click on the buttons.</p>
+                  
+                
+                    
+                    
+                    
+                   
+                    
+                    
+                </div>
+                
+                
+                
+                <form action="process.cfm" method="post"  class="ui-hide-label" id="form" data-corners="false">
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="username">Username:</label>
+				<input type="text" name="username" id="username" placeholder="Fistname">
+                
+			</fieldset>
+                    
+                    
+            <fieldset data-role="fieldcontain"> 
+				
+                 <label for="username">Username:</label>
+	                       <input type="text" name="username" id="username" value="" placeholder="Lastname"/>
+			</fieldset>        
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="password">Password:</label>
+				<input type="email" name="password" id="password" placeholder="Email">
+			</fieldset>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="password2">Confirm Password:</label>
+				<input type="tel" name="password2" id="password2"placeholder="Tel">
+			</fieldset>
+             
+             <fieldset data-role="controlgroup"  data-corners="false">
+                 <div class="ui-block-a">
+	   
+	   <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" data-corners="false" />
+	   <label for="checkbox-1">I agree</label>
+        </div>
+         <div class="ui-block-b">        
+        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" data-corners="false" />
+	   <label for="checkbox-2">I agree</label>
+                </div> 
+                 
+            <div class="ui-block-a">       
+        <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" data-corners="false"/>
+	   <label for="checkbox-3">I agree</label>            
+                    </div>
+                 <div class="ui-block-b">  
+                  <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom"  data-corners="false"/>
+	   <label for="checkbox-4">I agree</label>  
+                 </div>
+                 
+                 <div class="ui-block-a">  
+                   <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" data-corners="false" />
+	   <label for="checkbox-5">I agree</label>  
+                 </div>
+                 
+                 <div class="ui-block-b">  
+                   <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" data-corners="false" />
+	   <label for="checkbox-6">I agree</label>  
+                 </div>
+                 
+                 <div class="ui-block-a">  
+                   <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" data-corners="false" />
+	   <label for="checkbox-7">I agree</label>  
+               </div>
+                 <div class="ui-block-b">  
+                  <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" data-corners="false"/>
+	   <label for="checkbox-8">I agree</label>  
+                 </div>
+                 
+                 
+               
+	
+
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                    </fieldset>        
+                    
+                    
+                    
+                    
+			<fieldset data-role="fieldcontain"> 
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email">
+			</fieldset>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="favcolor">Favorite Color:</label>
+				<select id="favcolor" name="favcolor">
+					<option>Select One</option>
+					<option>Green</option>
+					<option>Red</option>
+					<option>Blue</option>
+					<option>Yellow</option>
+				</select>
+			</fieldset>
+ 
+			<fieldset data-role="fieldcontain"> 
+				<label for="hometown">Home Town:</label>
+				<input type="text" name="hometown" id="hometown">
+			</fieldset>
+ 
+			<input type="submit" value="Register">
+ 
+		</form>
+                
+                
+            </div>
+
+        <!-- Content-->
+        <div data-role="footer" data-theme="a" class="footer-docs">
+            <p style="text-align:center;">&copy; 2012 Writtle College</p>	<a href="#info" data-icon="info" data-role="button"
+            data-iconpos="notext" id="intro" class="ui-btn-right" data-rel="dialog"
+            data-transition="pop">info</a>
+
+        </div>
+        <!--footer-->
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <!-- Home Page -->
         
         <!-- Page -->
@@ -539,8 +746,7 @@
         <!-- info page -->
         
             
-    
-    
+ 
     
     
     
