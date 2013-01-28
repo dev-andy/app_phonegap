@@ -20,7 +20,22 @@
    // $(document).ready(function() {
    //     $.mobile.loadPage("video.html");
    // });
-            </script>
+            
+            
+     $( document ).bind( 'mobileinit', function(){
+  $.mobile.loader.prototype.options.text = "loading";
+  $.mobile.loader.prototype.options.textVisible = true;
+  $.mobile.loader.prototype.options.theme = "b";
+  $.mobile.loader.prototype.options.html = "Loading ...";
+});
+            
+            
+            
+
+    
+    
+</script>
+            
         <style type="text/css">
         </style>
     </head>
@@ -144,23 +159,25 @@
                
                     
                         
-                
+                 <ul data-role="listview" data-inset="true" data-theme="b" data-dividertheme="a" id="news-list">
+				
+				<li><a href="#"> <img src="./images/icons/news-icon.png"> <h1> Country Name : Thailand </h1><p>The Capital City of The Country Thailand is Bangkok.</p></a></li>
+				<li><a href="#"> <img src="./images/1.jpg"> <h1> Country Name : China </h1><p>The Capital City of The Country China is Beijing.</p></a></li>
+				<li><a href="#"> <img src="./images/2.jpg"> <h1> Country Name : Malaysia </h1><p>The Capital City of The Country Malaysia is Kuala Lumpur.</p></a></li>
+                <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-d ui-li-has-count">Thursday, October 7, 2012 <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2</span></li>
+				<li><a href="#"> <img src="./images/3.jpg"> <h1> Country Name : India </h1><p>The Capital City of The Country India is New Delhi.</p></a></li>
+				<li><a href="#"> <img src="./images/4.jpg"> <h1> Country Name : Indonesia </h1><p>The Capital City of The Country Indonesia is Jakarta.</p></a></li>
+                <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-d ui-li-has-count">Wednesday, May 7, 2012 <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">5</span></li>
+                     <li><a href="#"> <img src="./images/icons/news-icon.png"> <h1> Country Name : Thailand </h1><p>The Capital City of The Country Thailand is Bangkok.</p></a></li>
+				<li><a href="#"> <img src="./images/1.jpg"> <h1> Country Name : China </h1><p>The Capital City of The Country China is Beijing.</p></a></li>
+				<li><a href="#"> <img src="./images/2.jpg"> <h1> Country Name : Malaysia </h1><p>The Capital City of The Country Malaysia is Kuala Lumpur.</p></a></li>
+				<li><a href="#"> <img src="./images/3.jpg"> <h1> Country Name : India </h1><p>The Capital City of The Country India is New Delhi.</p></a></li>
+				<li><a href="#"> <img src="./images/4.jpg"> <h1> Country Name : Indonesia </h1><p>The Capital City of The Country Indonesia is Jakarta.</p></a></li>
+			     </ul>
               
               
                 
-                <ul data-role="listview" data-inset="true" data-theme="w" class="content-page"  >
-                    <li><a href="#"> news 1</a></li>
-                    <li><a href="#">Animal Care & Equine</a></li>
-                    <li><a href="#">Arboriculture</a></li>
-                    <li><a href="#">Art & Craft, Floristry and Photography</a></li>
-                    <li><a href="#"> First Aid and Health & Safety</a></li>
-                     <li><a href="#">Horticulture & Landscaping</a></li>
-                    <li><a href="#">Machinery Use and Maintenance</a></li>
-                    <li><a href="#">New Courses</a></li>
-                    <li><a href="#">Other Short Courses</a></li>
-                   
-                </ul>
-                   
+                
                 
                   
             </div>
@@ -227,7 +244,7 @@
               
                 
                 <ul data-role="listview" data-inset="true" data-filter="true"  data-theme="w" class="content-page"  data-icon="arrow-r" >
-                    <li><a href="#course" data-transition="none"> AMTRA (Animal Medicines Training & Regulatory Authority)</a></li>
+                    <li><a href="#course" data-transition="none"> AMTRA (Animal Medicines Training & Regulatory Authority)</a> <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2</span></li>
                     <li><a href="#" data-transition="none">Animal Care & Equine</a></li>
                     <li><a href="#">Arboriculture</a></li>
                     <li><a href="#">Art & Craft, Floristry and Photography</a></li>
@@ -510,12 +527,30 @@
             </div>
 
         <!-- Content-->
-        <div data-role="footer" data-theme="a" class="footer-docs">
-            <p style="text-align:center;">&copy; 2012 Writtle College</p>	<a href="#info" data-icon="info" data-role="button"
-            data-iconpos="notext" id="intro" class="ui-btn-right" data-rel="dialog"
-            data-transition="pop">info</a>
+            
+            
+            
+            
+            
+             <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                <div data-role="navbar" data-iconpos="top" class="ui-body-d">
+                    <ul>
+                        <li><a href="#" data-rel="back" id="back" data-transition="none" data-icon="custom">Back</a>
 
-        </div>
+                        </li>
+                        <li><a href="#news" id="news-icon" data-transition="none" data-icon="custom" class="">News</a>
+
+                        </li>
+                        <li><a href="#courses" id="courses-icon" data-transition="none" data-icon="custom" class="">Courses</a>
+
+                        </li>
+                        <li><a href="#contact" id="contact-us-icon" data-transition="none" data-icon="custom" class="ui-btn-active-d ui-state-persist">Contact Us</a>
+
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                <!-- /navbar -->
         <!--footer-->
         </div>
         
@@ -600,85 +635,63 @@
 				<input type="tel" name="password2" id="password2"placeholder="Tel">
 			</fieldset>
              
+                   
+                <h1>
+                    Select What Courses your intesting in 
+                    </h1>    
+                    
              <fieldset data-role="controlgroup"  data-corners="false">
                  <div class="ui-block-a">
 	   
 	   <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" data-corners="false" />
-	   <label for="checkbox-1">I agree</label>
+	   <label for="checkbox-1">AMTRA (Animal Medicines Training & Regulatory Authority)</label>
         </div>
          <div class="ui-block-b">        
         <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" data-corners="false" />
-	   <label for="checkbox-2">I agree</label>
+	   <label for="checkbox-2">Animal Care & Equine</label>
                 </div> 
                  
             <div class="ui-block-a">       
         <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" data-corners="false"/>
-	   <label for="checkbox-3">I agree</label>            
+	   <label for="checkbox-3">Arboriculture</label>            
                     </div>
                  <div class="ui-block-b">  
                   <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom"  data-corners="false"/>
-	   <label for="checkbox-4">I agree</label>  
+	   <label for="checkbox-4">Art & Craft, Floristry and Photography</label>  
                  </div>
                  
                  <div class="ui-block-a">  
                    <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" data-corners="false" />
-	   <label for="checkbox-5">I agree</label>  
+	   <label for="checkbox-5">First Aid and Health & Safety</label>  
                  </div>
                  
                  <div class="ui-block-b">  
                    <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" data-corners="false" />
-	   <label for="checkbox-6">I agree</label>  
+	   <label for="checkbox-6">Horticulture & Landscaping</label>  
                  </div>
                  
                  <div class="ui-block-a">  
                    <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" data-corners="false" />
-	   <label for="checkbox-7">I agree</label>  
+	   <label for="checkbox-7">Machinery Use and Maintenance</label>  
                </div>
                  <div class="ui-block-b">  
                   <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" data-corners="false"/>
-	   <label for="checkbox-8">I agree</label>  
+	   <label for="checkbox-8">New Courses</label>  
                  </div>
                  
-                 
-               
-	
-
-                 
-                 
-                 
-                 
-                 
-                 
-                 
-                 
+                     <div class="ui-block-a">  
+                  <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom" data-corners="false"/>
+	   <label for="checkbox-9">Other Short Courses</label>  
+                 </div>
                  
                     </fieldset>        
                     
                     
                     
                     
-			<fieldset data-role="fieldcontain"> 
-				<label for="email">Email:</label>
-				<input type="email" name="email" id="email">
-			</fieldset>
+		
  
-			<fieldset data-role="fieldcontain"> 
-				<label for="favcolor">Favorite Color:</label>
-				<select id="favcolor" name="favcolor">
-					<option>Select One</option>
-					<option>Green</option>
-					<option>Red</option>
-					<option>Blue</option>
-					<option>Yellow</option>
-				</select>
-			</fieldset>
- 
-			<fieldset data-role="fieldcontain"> 
-				<label for="hometown">Home Town:</label>
-				<input type="text" name="hometown" id="hometown">
-			</fieldset>
- 
-			<input type="submit" value="Register">
+			<input type="submit" value="Send">
  
 		</form>
                 

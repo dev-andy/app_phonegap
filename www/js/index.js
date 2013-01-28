@@ -18,7 +18,70 @@
                     'Device Platform: ' + device.platform + '<br />' +
                     'Device UUID: ' + device.uuid + '<br />' +
                     'Device Version: ' + device.version + '<br />';
+                
+                
+                
+                
+                  checkConnection();
             }
+
+
+
+
+
+
+
+          
+         
+         
+   
+
+    function checkConnection() {
+        //var networkState = navigator.network.connection.type; 
+         var networkState = navigator.network.connection.type;
+       // var states = {};
+        //states[Connection.UNKNOWN]  = 'Unknown connection';
+        //states[Connection.ETHERNET] = 'Ethernet connection';
+        //states[Connection.WIFI]     = 'WiFi connection';
+        //states[Connection.CELL_2G]  = 'Cell 2G connection';
+        //states[Connection.CELL_3G]  = 'Cell 3G connection';
+        //states[Connection.CELL_4G]  = 'Cell 4G connection';
+        //states[Connection.NONE]     = 'No network connection';
+
+       // alert('Connection type: ' + states[networkState]);
+       // alert('Connection type: ' + networkState);
+        
+        
+    if (networkState == Connection.NONE) {
+        showAlert();
+        }
+    }
+             
+             
+             
+             
+             
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+        window.location.href = "index.html";
+         navigator.app.exitApp();`
+    }
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        //if (!networkState == Connection.NONE) {
+        navigator.notification.alert(
+            'You have no network ... ',  // message
+            alertDismissed,         // callback
+            'Error',            // title
+            'Ok'                  // buttonName
+        ); 
+  
+             }
+             
+        
 
 
 

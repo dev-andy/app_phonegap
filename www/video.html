@@ -16,7 +16,7 @@
         <script src="phonegap.js"></script>
         <!-- load javascript for the page -->
          <script type="text/javascript" charset="utf-8" src="js/jquery.fitvids.min.js"></script>
-        
+        <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
          <script type="text/javascript" charset="utf-8">
 
     // Wait for Cordova to load
@@ -36,7 +36,8 @@
     }
 
     function checkConnection() {
-        var networkState = navigator.network.connection.type; 
+        //var networkState = navigator.network.connection.type; 
+         var networkState = navigator.network.connection.type;
        // var states = {};
         //states[Connection.UNKNOWN]  = 'Unknown connection';
         //states[Connection.ETHERNET] = 'Ethernet connection';
@@ -69,7 +70,7 @@
     // Show a custom alertDismissed
     //
     function showAlert() {
-       // if (!networkState == Connection.NONE) {
+        //if (!networkState == Connection.NONE) {
         navigator.notification.alert(
             'You have no network ... ',  // message
             alertDismissed,         // callback
@@ -79,8 +80,7 @@
   
              }
              
-    
-             
+        
 
     </script>
         
