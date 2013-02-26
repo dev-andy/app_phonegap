@@ -1169,6 +1169,15 @@ color: #666666;
 
 
 }	
+
+#main-content  ul {
+     font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;
+     font-size: 13px;
+    color: #666666;
+    
+    
+    
+}
 .ul-navbar .ui-btn-up-a{
  
     background: linear-gradient(#fff, #DDDDDD) repeat scroll 0 0 #EEEEEE;
@@ -1460,7 +1469,7 @@ video {
     text-align:center;
     margin:0 auto;
         padding: 0 auto;
-    max-width:70%;
+    max-width:60%;
     max-height:50%;
    
     
