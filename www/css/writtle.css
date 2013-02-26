@@ -1449,6 +1449,16 @@ video {
    
     
 }
+#flash {
+    
+    max-width:300px;
+    max-height:400px;
+    padding:10x;
+    margin:20px;
+}
+
+
+
 #myplayer p {
  padding: 0 2%;   
     
