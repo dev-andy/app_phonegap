@@ -16,13 +16,13 @@
         <!-- load javascript for the page -->
         <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
         
-        <script type="text/javascript">
-   // $(document).ready(function() {
-   //     $.mobile.loadPage("video.html");
-   // });
+<script type="text/javascript">
+    $(document).ready(function() {
+       $.mobile.loadPage("video.html");
+    });
             
             
-     $( document ).bind( 'mobileinit', function(){
+  $( document ).bind( 'mobileinit', function(){
   $.mobile.loader.prototype.options.text = "loading";
   $.mobile.loader.prototype.options.textVisible = true;
   $.mobile.loader.prototype.options.theme = "b";
